@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        myColor = ["Red", "Green", "White", "Black"];
+        let newArr = []
+        newArr= myColor.join(',')
+        console.log(newArr);
+
+        // bài 2
+//         Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2 số chẵn.
+// Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.
+let number = prompt('Nhập vào dãy số')
+let str = number.toString();
+let result = [];
+for (let i = 0; i < str.length; i++) {
+    if ((str[i]%2 == 0) && (str[i-1]%2 == 0 )) {
+        result.push('-', str[i]);
+    }
+    else {
+        result.push(str[i]);
+    }
+}console.log(result.join(''));
+
+// bài 3
+// Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường
+// trong chuỗi vừa nhập sang thành dạng chữ hoa.
+// Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của chương trình
+// là 'tHE qUICK bROWN fOX'.
+let str1 = prompt('Nhập vào một chuỗi');
+let arr1 = [];
+let result1 = []
+arr1 = str1.split("")
+
+for (let j = 0; j < arr1.length; j++) {
+    if (arr1[j]>='a' && arr1[j]<='z') {
+        result1.push( arr1[j].toUpperCase());
+    }else {
+        result1.push( arr1[j].toLowerCase());
+        
+    }
+    
+}console.log(result1.join("")
+);
+    </script>
+</body>
+</html>
